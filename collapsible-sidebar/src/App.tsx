@@ -1,12 +1,20 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faUser,
+  faEnvelope,
+  faCog,
+  faSignOutAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./App.css";
 
 const links = [
-  { name: "Home", icon: "🏠" },
-  { name: "Profile", icon: "👤" },
-  { name: "Messages", icon: "✉️" },
-  { name: "Settings", icon: "⚙️" },
-  { name: "Logout", icon: "🚪" },
+  { name: "Home", icon: faHome },
+  { name: "Profile", icon: faUser },
+  { name: "Messages", icon: faEnvelope },
+  { name: "Settings", icon: faCog },
+  { name: "Logout", icon: faSignOutAlt },
 ];
 
 function App() {
@@ -20,14 +28,11 @@ function App() {
           {open ? <div className="logo-placeholder">Logo</div> : null}
 
           <button
-            className={`toggle-btn ${open? "" : "toggle-btn-closed"}`}
+            className={`toggle-btn ${open ? "" : "toggle-btn-closed"}`}
             onClick={toggleSidebar}
             aria-label={open ? "Close sidebar" : "Open sidebar"}
           >
-            <svg
-              className="toggle-icon"
-              viewBox="0 0 512 512"
-            >
+            <svg className="toggle-icon" viewBox="0 0 512 512">
               <g
                 transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
                 fill={open ? "var(--primary-color)" : "var(--secondary-color)"}
@@ -69,7 +74,9 @@ function App() {
               {links.map((link) => (
                 <li className="menu-element" key={link.name}>
                   <a href="#">
-                    <span className="menu-icon">{link.icon}</span>
+                    <span className="menu-icon">
+                      <FontAwesomeIcon icon={link.icon} />
+                    </span>
                     <span className="link-text">{link.name}</span>
                   </a>
                 </li>
