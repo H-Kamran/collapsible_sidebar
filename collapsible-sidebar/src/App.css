@@ -5,7 +5,7 @@
 }
 
 .sidebar {
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
   color: var(--primary-color);
   width: 25%;
   min-width: 220px;
@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 16px;
+  padding: 18px 21px;
   border-bottom: 1px solid var(--primary-color);
 }
 .logo-placeholder {
@@ -32,7 +32,7 @@
   font-weight: bold;
 }
 .toggle-btn {
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,11 +54,19 @@
 }
 .menu-element {
   list-style-type: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 .menu-element a {
   text-decoration: none;
   color: inherit;
+}
+/* Hover effect for sidebar nav elements */
+.menu-element:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 6px;
+  transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 .menu-element .link-text {
   padding-left: 5px;

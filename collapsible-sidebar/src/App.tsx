@@ -4,7 +4,6 @@ import {
   faUser,
   faEnvelope,
   faCog,
-  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./App.css";
@@ -14,7 +13,6 @@ const links = [
   { name: "Profile", icon: faUser },
   { name: "Messages", icon: faEnvelope },
   { name: "Settings", icon: faCog },
-  { name: "Logout", icon: faSignOutAlt },
 ];
 
 function App() {
